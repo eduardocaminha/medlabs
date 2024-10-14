@@ -1,17 +1,11 @@
 'use client'
 
 import * as React from "react"
-import { Calendar, Mail, FileText, MessageSquare, ArrowRight, Github, Star, Check, X, HelpCircle, Zap } from "lucide-react"
+import { Calendar, Mail, FileText, MessageSquare, ArrowRight, Github } from "lucide-react"
 import { motion, AnimatePresence } from "framer-motion"
 
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion"
 
 const useWordRotation = (words: string[], interval: number) => {
   const [currentIndex, setCurrentIndex] = React.useState(0)
