@@ -37,7 +37,7 @@ export function LandingPageComponent() {
       const target = section.getBoundingClientRect().top + window.pageYOffset
       const startTime = 'now' in window.performance ? performance.now() : new Date().getTime()
 
-      function scroll() {
+      const scroll = () => {
         const now = 'now' in window.performance ? performance.now() : new Date().getTime()
         const time = Math.min(1, ((now - startTime) / 1000))
         const ease = easeInOutCubic(time)
@@ -49,7 +49,7 @@ export function LandingPageComponent() {
         }
       }
 
-      function easeInOutCubic(t: number): number {
+      const easeInOutCubic = (t: number): number => {
         return t < 0.5 ? 4 * t * t * t : (t - 1) * (2 * t - 2) * (2 * t - 2) + 1
       }
 
